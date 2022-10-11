@@ -125,6 +125,7 @@ export default function Home() {
       // call the startGame function from the contract
       const tx = await randomGameNFTContract.joinGame({
         value: entryFee,
+        gasLimit: 2000000
       });
       await tx.wait();
       setLoading(false);
